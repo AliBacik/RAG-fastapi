@@ -1,0 +1,3 @@
+{"id":"ring-size-final-link","query":"Can you send me the ring size guide link?","must_include":["https://eternate.com/pages/how-to-measure-your-ring-size"],"must_not_include":[],"expects_transfer":false}
+{"id":"damaged-order-transfer","query":"My ring arrived damaged and I need help with my order.","must_include":[],"must_not_include":[],"expects_transfer":true}
+{"id":"general-return-no-transfer","query":"What is your return policy?","must_include":[],"must_not_include":[],"expects_transfer":false}

@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-08-24T08:17:18.871078+00:00",
+  "total_cases": 3,
+  "passed_cases": 3,
+  "average_answer_eval_ms": 2225.86,
+  "cases": [
+    {
+      "id": "ring-size-final-link",
+      "passed": true,
+      "route": "SINGLE",
+      "elapsed_ms": 2614.2,
+      "missing_terms": [],
+      "forbidden_terms": [],
+      "expected_transfer": false,
+      "actual_transfer": false
+    },
+    {
+      "id": "damaged-order-transfer",
+      "passed": true,
+      "route": "SINGLE",
+      "elapsed_ms": 1438.09,
+      "missing_terms": [],
+      "forbidden_terms": [],
+      "expected_transfer": true,
+      "actual_transfer": true
+    },
+    {
+      "id": "general-return-no-transfer",
+      "passed": true,
+      "route": "SINGLE",
+      "elapsed_ms": 2625.28,
+      "missing_terms": [],
+      "forbidden_terms": [],
+      "expected_transfer": false,
+      "actual_transfer": false
+    }
+  ]
+}

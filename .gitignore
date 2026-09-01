@@ -1,0 +1,12 @@
+.env
+.venv
+venv
+__pycache__
+*.pyc
+.idea
+.vscode
+*.log
+env.yaml
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/

@@ -1,0 +1,35 @@
+# Local calistirma
+.\venv\Scripts\python.exe -m uvicorn main:app --reload
+
+# --- Cloud Run deploy ---------------------------------------------------
+# env.yaml .env'den uretilir (asagidaki tek satirlik komutla), git ve
+# Docker'a girmez. Sirlar komut satirinda gorunmesin diye dosyadan okunuyor.
+
+# 1) env.yaml uret (.env degistiyse tekrar calistir)
+.\venv\Scripts\python.exe -c "from dotenv import dotenv_values; v=dotenv_values('.env'); ks=['GOOGLE_CLOUD_PROJECT','GOOGLE_CLOUD_LOCATION','VERTEX_TUNED_ENDPOINT','ETERNATE_API_KEY','GENAI_API_KEY','SUPABASE_URL','SUPABASE_KEY','ADMIN_API_KEY','SHOPIFY_STORE']; open('env.yaml','w',encoding='utf-8').write('\n'.join(f'{k}: \"{v[k]}\"' for k in ks if v.get(k))+'\n')"
+
+# 2) Deploy
+gcloud run deploy eternate-ai-api ^
+  --source . ^
+  --project renart-storefronts ^
+  --region us-central1 ^
+  --platform managed ^
+  --allow-unauthenticated ^
+  --env-vars-file env.yaml ^
+  --memory 1Gi ^
+  --cpu 1 ^
+  --timeout 120 ^
+  --min-instances 0 ^
+  --max-instances 10
+
+# 3) Saglik kontrolu (URL'i deploy ciktisindan al)
+curl https://SERVIS-URL/health
+
+
+
+powershell -ExecutionPolicy Bypass -File .\scripts\predeploy_check.ps1
+
+python intent_ml/train_intent_model.py
+
+
+

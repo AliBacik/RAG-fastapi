@@ -1,0 +1,4 @@
+{"id":"return-engraved","query":"Can I return an engraved ring 20 days after delivery?","expected_route":"SINGLE","expected_history_dependent":false,"expected_groups":[["engraving","return"]]}
+{"id":"platinum-colours","query":"What colors are available for platinum wedding bands?","expected_route":"SINGLE","expected_history_dependent":false,"expected_groups":[["platinum","white"]]}
+{"id":"platinum-follow-up","query":"What about rose gold?","history":"Customer: Can I get a platinum wedding band in different colors?\nAssistant: Platinum wedding bands are available only in white.","expected_route":"SINGLE","expected_history_dependent":true,"expected_groups":[["platinum","white"]]}
+{"id":"ring-size-guide-link","query":"Can you send me the ring size guide link?","expected_route":"SINGLE","expected_history_dependent":false,"expected_groups":[["how-to-measure-your-ring-size"]]}

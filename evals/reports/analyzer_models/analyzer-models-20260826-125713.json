@@ -1,0 +1,671 @@
+{
+  "created_at": "2026-08-26T12:57:13.606540+00:00",
+  "case_count": 40,
+  "models": [
+    {
+      "model": "gemini-2.5-flash",
+      "completed": 0,
+      "errors": 40,
+      "fully_correct": 0,
+      "fully_correct_pct": 0.0,
+      "field_correct": {
+        "query_type": 0,
+        "depends_on_history": 0,
+        "product_intent": 0,
+        "flow_intent": 0,
+        "order_id": 0
+      },
+      "latency_ms": {
+        "mean": null,
+        "p50": null,
+        "p90": null
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "completed": 0,
+      "errors": 40,
+      "fully_correct": 0,
+      "fully_correct_pct": 0.0,
+      "field_correct": {
+        "query_type": 0,
+        "depends_on_history": 0,
+        "product_intent": 0,
+        "flow_intent": 0,
+        "order_id": 0
+      },
+      "latency_ms": {
+        "mean": null,
+        "p50": null,
+        "p90": null
+      }
+    },
+    {
+      "model": "gemini-3.6-flash",
+      "completed": 0,
+      "errors": 40,
+      "fully_correct": 0,
+      "fully_correct_pct": 0.0,
+      "field_correct": {
+        "query_type": 0,
+        "depends_on_history": 0,
+        "product_intent": 0,
+        "flow_intent": 0,
+        "order_id": 0
+      },
+      "latency_ms": {
+        "mean": null,
+        "p50": null,
+        "p90": null
+      }
+    }
+  ],
+  "results": {
+    "gemini-2.5-flash": [
+      {
+        "id": "policy-return-basic",
+        "elapsed_ms": 94.33,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-engraved-return",
+        "elapsed_ms": 2.73,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-warranty-resize",
+        "elapsed_ms": 5.26,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-material-and-engraving",
+        "elapsed_ms": 2.2,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-diamond-ethics",
+        "elapsed_ms": 4.39,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-return-and-shipping",
+        "elapsed_ms": 1.97,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-ring-size",
+        "elapsed_ms": 1.89,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-cleaning",
+        "elapsed_ms": 2.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-track",
+        "elapsed_ms": 2.19,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-status",
+        "elapsed_ms": 2.6,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-cancel",
+        "elapsed_ms": 4.34,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-address-change",
+        "elapsed_ms": 2.15,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-damaged",
+        "elapsed_ms": 1.84,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-return-start",
+        "elapsed_ms": 2.18,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-exchange-start",
+        "elapsed_ms": 1.95,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-payment-dispute",
+        "elapsed_ms": 3.45,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-wholesale",
+        "elapsed_ms": 3.44,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-recommend-budget",
+        "elapsed_ms": 2.13,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-recommend-material",
+        "elapsed_ms": 3.09,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-product-weight",
+        "elapsed_ms": 2.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-compare",
+        "elapsed_ms": 3.84,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-gift-no-term",
+        "elapsed_ms": 2.04,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-rose-gold",
+        "elapsed_ms": 2.69,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-engraved-return",
+        "elapsed_ms": 2.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-comparison",
+        "elapsed_ms": 3.55,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-product-weight",
+        "elapsed_ms": 1.92,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-order-tracking",
+        "elapsed_ms": 3.83,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-address-change",
+        "elapsed_ms": 2.79,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-return-start",
+        "elapsed_ms": 2.06,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-repair",
+        "elapsed_ms": 1.96,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-return",
+        "elapsed_ms": 5.8,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-shipping",
+        "elapsed_ms": 2.54,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-wholesale",
+        "elapsed_ms": 2.18,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-order-change",
+        "elapsed_ms": 4.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-multi-policy",
+        "elapsed_ms": 6.04,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-recommend-and-compare",
+        "elapsed_ms": 2.26,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "live-agent-request",
+        "elapsed_ms": 1.91,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-topic-ambiguous",
+        "elapsed_ms": 2.06,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "multi-fact-custom",
+        "elapsed_ms": 4.37,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "simple-order-change",
+        "elapsed_ms": 2.27,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      }
+    ],
+    "gemini-3.5-flash-lite": [
+      {
+        "id": "policy-return-basic",
+        "elapsed_ms": 4.54,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-engraved-return",
+        "elapsed_ms": 5.31,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-warranty-resize",
+        "elapsed_ms": 3.38,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-material-and-engraving",
+        "elapsed_ms": 2.03,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-diamond-ethics",
+        "elapsed_ms": 2.09,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-return-and-shipping",
+        "elapsed_ms": 1.93,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-ring-size",
+        "elapsed_ms": 3.42,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-cleaning",
+        "elapsed_ms": 2.47,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-track",
+        "elapsed_ms": 4.98,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-status",
+        "elapsed_ms": 2.1,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-cancel",
+        "elapsed_ms": 1.99,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-address-change",
+        "elapsed_ms": 1.92,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-damaged",
+        "elapsed_ms": 1.87,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-return-start",
+        "elapsed_ms": 3.49,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-exchange-start",
+        "elapsed_ms": 4.5,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-payment-dispute",
+        "elapsed_ms": 2.18,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-wholesale",
+        "elapsed_ms": 4.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-recommend-budget",
+        "elapsed_ms": 1.95,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-recommend-material",
+        "elapsed_ms": 4.8,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-product-weight",
+        "elapsed_ms": 2.16,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-compare",
+        "elapsed_ms": 2.54,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-gift-no-term",
+        "elapsed_ms": 2.19,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-rose-gold",
+        "elapsed_ms": 3.43,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-engraved-return",
+        "elapsed_ms": 1.93,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-comparison",
+        "elapsed_ms": 4.31,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-product-weight",
+        "elapsed_ms": 2.04,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-order-tracking",
+        "elapsed_ms": 3.03,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-address-change",
+        "elapsed_ms": 2.54,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-return-start",
+        "elapsed_ms": 4.62,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-repair",
+        "elapsed_ms": 3.81,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-return",
+        "elapsed_ms": 3.29,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-shipping",
+        "elapsed_ms": 4.39,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-wholesale",
+        "elapsed_ms": 4.67,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-order-change",
+        "elapsed_ms": 2.51,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-multi-policy",
+        "elapsed_ms": 2.3,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-recommend-and-compare",
+        "elapsed_ms": 2.76,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "live-agent-request",
+        "elapsed_ms": 3.86,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-topic-ambiguous",
+        "elapsed_ms": 2.34,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "multi-fact-custom",
+        "elapsed_ms": 4.12,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "simple-order-change",
+        "elapsed_ms": 1.99,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      }
+    ],
+    "gemini-3.6-flash": [
+      {
+        "id": "policy-return-basic",
+        "elapsed_ms": 3.89,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-engraved-return",
+        "elapsed_ms": 2.9,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-warranty-resize",
+        "elapsed_ms": 2.49,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-material-and-engraving",
+        "elapsed_ms": 1.91,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-diamond-ethics",
+        "elapsed_ms": 3.71,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-return-and-shipping",
+        "elapsed_ms": 2.32,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-ring-size",
+        "elapsed_ms": 3.41,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "policy-cleaning",
+        "elapsed_ms": 2.09,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-track",
+        "elapsed_ms": 1.95,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-status",
+        "elapsed_ms": 1.98,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-cancel",
+        "elapsed_ms": 3.45,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-address-change",
+        "elapsed_ms": 2.46,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-damaged",
+        "elapsed_ms": 4.13,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-return-start",
+        "elapsed_ms": 2.3,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-exchange-start",
+        "elapsed_ms": 2.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "order-payment-dispute",
+        "elapsed_ms": 2.14,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-wholesale",
+        "elapsed_ms": 4.77,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-recommend-budget",
+        "elapsed_ms": 2.71,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-recommend-material",
+        "elapsed_ms": 2.95,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-product-weight",
+        "elapsed_ms": 1.99,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-compare",
+        "elapsed_ms": 3.71,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "sales-gift-no-term",
+        "elapsed_ms": 1.96,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-rose-gold",
+        "elapsed_ms": 4.16,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-engraved-return",
+        "elapsed_ms": 2.05,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-comparison",
+        "elapsed_ms": 2.34,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-product-weight",
+        "elapsed_ms": 1.96,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-order-tracking",
+        "elapsed_ms": 3.79,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-address-change",
+        "elapsed_ms": 3.72,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-return-start",
+        "elapsed_ms": 2.55,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-repair",
+        "elapsed_ms": 1.98,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-return",
+        "elapsed_ms": 2.37,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-shipping",
+        "elapsed_ms": 5.02,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "topic-shift-wholesale",
+        "elapsed_ms": 2.29,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-order-change",
+        "elapsed_ms": 2.33,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-multi-policy",
+        "elapsed_ms": 2.52,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "complex-recommend-and-compare",
+        "elapsed_ms": 2.4,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "live-agent-request",
+        "elapsed_ms": 3.49,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "followup-topic-ambiguous",
+        "elapsed_ms": 2.09,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "multi-fact-custom",
+        "elapsed_ms": 1.85,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      },
+      {
+        "id": "simple-order-change",
+        "elapsed_ms": 1.93,
+        "error": "ConnectError: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"
+      }
+    ]
+  }
+}

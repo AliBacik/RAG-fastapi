@@ -1,0 +1,99 @@
+import logging
+import os
+from concurrent.futures import ThreadPoolExecutor
+
+from concurrent.futures import Future, ThreadPoolExecutor
+from rag.adaptive_retriever import adaptive_retrieve_overlapped
+
+from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi.responses import JSONResponse
+
+from schemas import GenerateReplyRequest, GenerateReplyResponse, ChatRequest,ChatResponse
+from vertex_service import generate_reply as generate_reply_from_vertex
+
+from rag.query_analyzer import analyze_query
+from rag.product_context import build_product_context, verify_links
+from rag.retriever import retrieve
+from rag.adaptive_retriever import adaptive_retrieve
+from rag.generator import generate_answer
+
+logger = logging.getLogger("eternate-rag-fastapi")
+
+ETERNATE_API_KEY = os.getenv("ETERNATE_API_KEY")
+
+app = FastAPI(title="Eternate RAG API")
+
+
+def verify_api_key(x_api_key: str | None = Header(default=None)) -> None:
+    if not ETERNATE_API_KEY or x_api_key != ETERNATE_API_KEY:
+        raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "service": "eternate-rag-fastapi"}
+
+
+@app.post("/generate-reply", response_model=GenerateReplyResponse, dependencies=[Depends(verify_api_key)])
+def generate_reply(request: GenerateReplyRequest):
+    if not request.customer_message or not request.customer_message.strip():
+        raise HTTPException(status_code=422, detail="customer_message is required")
+
+    try:
+        reply_text = generate_reply_from_vertex(request)
+        return GenerateReplyResponse(success=True, reply=reply_text)
+    except Exception:
+        logger.exception("Reply generation failed for ticket_id=%s", request.ticket_id)
+        return JSONResponse(
+            status_code=500,
+            content=GenerateReplyResponse(success=False, error="Reply generation failed.").model_dump(),
+        )
+
+
+@app.post("/chat", response_model=ChatResponse, dependencies=[Depends(verify_api_key)])
+
+def _run_retrieval_and_publish_analysis(query,history,analysis_slot):
+    def analyze_and_publish(q,h):
+        result=analyze_query(q,history=h)
+        analysis_slot.set_result(result)
+        return result
+    
+    return adaptive_retrieve_overlapped(
+        query,retrieve,history,analyze_fn=analyze_and_publish
+    )
+
+def chat(request: ChatRequest):
+    
+    analysis = analyze_query(request.query,history=request.history)
+
+    analysis_slot = Future()
+    # Retrieval ve Shopify cagrisi birbirinden bagimsiz; ikisi de yalnizca
+    # analysis'e bagli. Paralel calistirinca urun sorularinda ~0.6s kaziniyor.
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        retrieval_job = executor.submit(
+            _run_retrieval_and_publish_analysis,
+            request.query,
+            retrieve,
+            request.history,
+            analysis,
+        )
+        
+        analysis = analysis_slot.result()
+        
+        product_job = executor.submit(build_product_context, analysis)
+
+        contexts,analysis = retrieval_job.result()
+        product_data = product_job.result()
+    
+    answer = generate_answer(
+        query=request.query,
+        contexts=contexts,
+        history=request.history,
+        product_data=product_data
+    )
+
+    # Model bazen urun linkini "duzeltip" 404 uretiyor; katalog verisine
+    # gore dogrula.
+    answer = verify_links(answer, product_data)
+
+    return ChatResponse(message=answer)

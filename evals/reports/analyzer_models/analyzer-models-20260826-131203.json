@@ -1,0 +1,2444 @@
+{
+  "created_at": "2026-08-26T13:12:03.423462+00:00",
+  "case_count": 40,
+  "models": [
+    {
+      "model": "gemini-3-flash-preview",
+      "completed": 40,
+      "errors": 0,
+      "fully_correct": 36,
+      "fully_correct_pct": 90.0,
+      "field_correct": {
+        "query_type": 38,
+        "depends_on_history": 40,
+        "product_intent": 39,
+        "flow_intent": 39,
+        "order_id": 40
+      },
+      "latency_ms": {
+        "mean": 1728.24,
+        "p50": 1621.46,
+        "p90": 2083.67
+      }
+    },
+    {
+      "model": "gemini-3.1-flash-lite",
+      "completed": 40,
+      "errors": 0,
+      "fully_correct": 37,
+      "fully_correct_pct": 92.5,
+      "field_correct": {
+        "query_type": 38,
+        "depends_on_history": 40,
+        "product_intent": 39,
+        "flow_intent": 39,
+        "order_id": 40
+      },
+      "latency_ms": {
+        "mean": 1077.12,
+        "p50": 1056.31,
+        "p90": 1226.11
+      }
+    },
+    {
+      "model": "gemini-2.5-flash-lite",
+      "completed": 40,
+      "errors": 0,
+      "fully_correct": 32,
+      "fully_correct_pct": 80.0,
+      "field_correct": {
+        "query_type": 38,
+        "depends_on_history": 38,
+        "product_intent": 38,
+        "flow_intent": 38,
+        "order_id": 40
+      },
+      "latency_ms": {
+        "mean": 882.43,
+        "p50": 860.87,
+        "p90": 998.94
+      }
+    }
+  ],
+  "results": {
+    "gemini-3-flash-preview": [
+      {
+        "id": "policy-return-basic",
+        "elapsed_ms": 1728.69,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return policy?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-engraved-return",
+        "elapsed_ms": 1558.79,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I return an engraved ring 20 days after delivery?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-warranty-resize",
+        "elapsed_ms": 1625.22,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "My ring was resized by another jeweler and a stone is now loose. Is that covered by warranty?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-material-and-engraving",
+        "elapsed_ms": 2157.96,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "What colors are available for platinum wedding bands?",
+            "What are the costs and rules for outside engraving on wedding bands?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-diamond-ethics",
+        "elapsed_ms": 2682.7,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Are Eternate natural diamonds ethically sourced?",
+            "How do natural diamonds differ from lab-grown diamonds?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-return-and-shipping",
+        "elapsed_ms": 1593.51,
+        "passed": false,
+        "mismatches": {
+          "query_type": {
+            "expected": "MULTI_FACT",
+            "actual": "SINGLE"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return window, and who pays the return shipping cost?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-ring-size",
+        "elapsed_ms": 1652.57,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How do I find my ring size?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-cleaning",
+        "elapsed_ms": 1460.78,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How should I clean my gold necklace?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "order-track",
+        "elapsed_ms": 1580.82,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Please track order E101-10482 for me."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-10482"
+        }
+      },
+      {
+        "id": "order-status",
+        "elapsed_ms": 2098.93,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the status of order E101-8821?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-8821"
+        }
+      },
+      {
+        "id": "order-cancel",
+        "elapsed_ms": 1692.45,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I need to cancel order E101-99101 before it ships."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "CANCEL_ORDER",
+          "order_id": "E101-99101"
+        }
+      },
+      {
+        "id": "order-address-change",
+        "elapsed_ms": 1831.79,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the shipping address for order E101-55520?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ADDRESS_CHANGE",
+          "order_id": "E101-55520"
+        }
+      },
+      {
+        "id": "order-damaged",
+        "elapsed_ms": 1739.29,
+        "passed": false,
+        "mismatches": {
+          "flow_intent": {
+            "expected": "NONE",
+            "actual": "REPAIR_RESIZE"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "My order arrived damaged and I need help."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "REPAIR_RESIZE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "order-return-start",
+        "elapsed_ms": 1639.6,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I want to start a return for order E101-7402."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": "E101-7402"
+        }
+      },
+      {
+        "id": "order-exchange-start",
+        "elapsed_ms": 1495.78,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I received the wrong size and want an exchange for order E101-66301."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_EXCHANGE",
+          "order_id": "E101-66301"
+        }
+      },
+      {
+        "id": "order-payment-dispute",
+        "elapsed_ms": 1621.46,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I was charged twice for order E101-3477 and will dispute this charge."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "PAYMENT_DISPUTE",
+          "order_id": "E101-3477"
+        }
+      },
+      {
+        "id": "sales-wholesale",
+        "elapsed_ms": 1638.42,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Do you offer wholesale pricing?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "WHOLESALE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-recommend-budget",
+        "elapsed_ms": 3172.94,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I need a gift necklace for my wife under $250."
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 250,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-recommend-material",
+        "elapsed_ms": 1550.2,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can you recommend a sterling silver bracelet under $150?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "sterling silver bracelet",
+          "budget_max": 150,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-product-weight",
+        "elapsed_ms": 1704.24,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How much does the Cursive Name Necklace weigh?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "WEIGHT",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-compare",
+        "elapsed_ms": 1565.01,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Which is better for everyday wear, 14k gold or sterling silver?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-gift-no-term",
+        "elapsed_ms": 1899.15,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I am looking for a birthday gift under $500."
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 500,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-rose-gold",
+        "elapsed_ms": 1553.53,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What colors are available for rose gold wedding bands?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-engraved-return",
+        "elapsed_ms": 1488.53,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can engraved items be returned within the 30-day return window?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-comparison",
+        "elapsed_ms": 1511.81,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Which is better for an engagement ring: a lab-grown diamond or a natural diamond?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-product-weight",
+        "elapsed_ms": 2052.4,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How much does the Cursive Name Necklace weigh?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "WEIGHT",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-order-tracking",
+        "elapsed_ms": 1603.55,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Where is my order E101-45219?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-45219"
+        }
+      },
+      {
+        "id": "followup-address-change",
+        "elapsed_ms": 2083.67,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I update the shipping address for my order E101-71442?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ADDRESS_CHANGE",
+          "order_id": "E101-71442"
+        }
+      },
+      {
+        "id": "followup-return-start",
+        "elapsed_ms": 1489.52,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the process to return an order?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": "E101-11802"
+        }
+      },
+      {
+        "id": "followup-repair",
+        "elapsed_ms": 1866.95,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "My gold ring from order E101-92014 is too loose. Can it be resized?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "REPAIR_RESIZE",
+          "order_id": "E101-92014"
+        }
+      },
+      {
+        "id": "topic-shift-return",
+        "elapsed_ms": 1552.76,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return policy?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "topic-shift-shipping",
+        "elapsed_ms": 1494.99,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How long does standard shipping take?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "topic-shift-wholesale",
+        "elapsed_ms": 1469.6,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Do you offer wholesale pricing for a retail store?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "WHOLESALE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "complex-order-change",
+        "elapsed_ms": 1550.8,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the ring size and engraving on an order before it has shipped?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_CHANGE",
+          "order_id": "E101-60606"
+        }
+      },
+      {
+        "id": "complex-multi-policy",
+        "elapsed_ms": 1475.87,
+        "passed": false,
+        "mismatches": {
+          "query_type": {
+            "expected": "MULTI_FACT",
+            "actual": "SINGLE"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I resize a ring after purchase, and does resizing affect the warranty?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "complex-recommend-and-compare",
+        "elapsed_ms": 1756.68,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Is 14k gold or sterling silver better for a durable everyday necklace?",
+            "What are the durability differences between 14k gold and sterling silver?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 300,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "live-agent-request",
+        "elapsed_ms": 1417.42,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Please connect me to a human agent."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "LIVE_AGENT",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-topic-ambiguous",
+        "elapsed_ms": 1726.99,
+        "passed": false,
+        "mismatches": {
+          "product_intent": {
+            "expected": "NONE",
+            "actual": "RECOMMEND"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What metal options are available for the Cursive Name Necklace?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "RECOMMEND",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "multi-fact-custom",
+        "elapsed_ms": 1500.0,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Do you offer custom ring design with outside engraving?",
+            "What is the lead time for custom jewelry orders?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "simple-order-change",
+        "elapsed_ms": 1844.11,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the engraving on order E101-30291?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_CHANGE",
+          "order_id": "E101-30291"
+        }
+      }
+    ],
+    "gemini-3.1-flash-lite": [
+      {
+        "id": "policy-return-basic",
+        "elapsed_ms": 1401.88,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return policy?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-engraved-return",
+        "elapsed_ms": 1409.77,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I return an engraved ring 20 days after delivery?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-warranty-resize",
+        "elapsed_ms": 1114.11,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "My ring was resized by another jeweler and now a stone is loose. Is it covered by the warranty?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-material-and-engraving",
+        "elapsed_ms": 1417.84,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Can you make a platinum wedding band in rose gold?",
+            "What is the cost for outside engraving on a wedding band?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-diamond-ethics",
+        "elapsed_ms": 1091.02,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Are Eternate natural diamonds ethically sourced?",
+            "How do natural diamonds differ from lab-grown diamonds?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-return-and-shipping",
+        "elapsed_ms": 1016.21,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "What is your return window policy?",
+            "Who pays for return shipping costs?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-ring-size",
+        "elapsed_ms": 986.58,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How can I find my ring size?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-cleaning",
+        "elapsed_ms": 1088.34,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How should I clean a gold necklace?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "order-track",
+        "elapsed_ms": 1116.76,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Track order E101-10482"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-10482"
+        }
+      },
+      {
+        "id": "order-status",
+        "elapsed_ms": 1005.31,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the status of order E101-8821?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-8821"
+        }
+      },
+      {
+        "id": "order-cancel",
+        "elapsed_ms": 1081.89,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I need to cancel order E101-99101 before it ships."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "CANCEL_ORDER",
+          "order_id": "E101-99101"
+        }
+      },
+      {
+        "id": "order-address-change",
+        "elapsed_ms": 1056.31,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the shipping address for order E101-55520?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ADDRESS_CHANGE",
+          "order_id": "E101-55520"
+        }
+      },
+      {
+        "id": "order-damaged",
+        "elapsed_ms": 943.36,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the return or replacement policy for items that arrive damaged?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "order-return-start",
+        "elapsed_ms": 1177.68,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I want to start a return for order E101-7402."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": "E101-7402"
+        }
+      },
+      {
+        "id": "order-exchange-start",
+        "elapsed_ms": 1159.27,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I received the wrong size and want an exchange for order E101-66301."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_EXCHANGE",
+          "order_id": "E101-66301"
+        }
+      },
+      {
+        "id": "order-payment-dispute",
+        "elapsed_ms": 997.73,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the procedure for handling a disputed charge or duplicate payment?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "PAYMENT_DISPUTE",
+          "order_id": "E101-3477"
+        }
+      },
+      {
+        "id": "sales-wholesale",
+        "elapsed_ms": 945.08,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Do you offer wholesale pricing?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "WHOLESALE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-recommend-budget",
+        "elapsed_ms": 969.1,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I need a gift necklace for my wife under $250."
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 250,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-recommend-material",
+        "elapsed_ms": 1226.11,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can you recommend a sterling silver bracelet under $150?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "sterling silver bracelet",
+          "budget_max": 150,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-product-weight",
+        "elapsed_ms": 875.95,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How much does the Cursive Name Necklace weigh?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "WEIGHT",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-compare",
+        "elapsed_ms": 1021.63,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Comparison of 14k gold and sterling silver for everyday wear durability and maintenance"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-gift-no-term",
+        "elapsed_ms": 1096.7,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "gift guide for birthday gifts under $500"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "gift",
+          "budget_max": 500,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-rose-gold",
+        "elapsed_ms": 1012.87,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What colors are available for rose gold wedding bands?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-engraved-return",
+        "elapsed_ms": 945.56,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can engraved items be returned within the 30-day return window?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-comparison",
+        "elapsed_ms": 1077.26,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What are the pros and cons of lab-grown versus natural diamonds for an engagement ring?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-product-weight",
+        "elapsed_ms": 1273.7,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How much does the Cursive Name Necklace weigh?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "WEIGHT",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-order-tracking",
+        "elapsed_ms": 1202.25,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can you track order E101-45219?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-45219"
+        }
+      },
+      {
+        "id": "followup-address-change",
+        "elapsed_ms": 1099.24,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I update the delivery address for order E101-71442 after moving?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ADDRESS_CHANGE",
+          "order_id": "E101-71442"
+        }
+      },
+      {
+        "id": "followup-return-start",
+        "elapsed_ms": 1031.31,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How do I return an order for a refund?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": "E101-11802"
+        }
+      },
+      {
+        "id": "followup-repair",
+        "elapsed_ms": 1005.84,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can a gold ring be resized?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "REPAIR_RESIZE",
+          "order_id": "E101-92014"
+        }
+      },
+      {
+        "id": "topic-shift-return",
+        "elapsed_ms": 944.81,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return policy?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "topic-shift-shipping",
+        "elapsed_ms": 1048.93,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the delivery time for standard shipping?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "topic-shift-wholesale",
+        "elapsed_ms": 936.5,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Do you offer wholesale pricing for retail stores?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "WHOLESALE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "complex-order-change",
+        "elapsed_ms": 1162.71,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the ring size and engraving for order E101-60606 before it ships?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_CHANGE",
+          "order_id": "E101-60606"
+        }
+      },
+      {
+        "id": "complex-multi-policy",
+        "elapsed_ms": 1022.99,
+        "passed": false,
+        "mismatches": {
+          "query_type": {
+            "expected": "MULTI_FACT",
+            "actual": "SINGLE"
+          },
+          "flow_intent": {
+            "expected": "NONE",
+            "actual": "REPAIR_RESIZE"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I resize a ring after purchase, and does resizing affect the warranty?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "REPAIR_RESIZE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "complex-recommend-and-compare",
+        "elapsed_ms": 945.35,
+        "passed": false,
+        "mismatches": {
+          "query_type": {
+            "expected": "MULTI_FACT",
+            "actual": "SINGLE"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Is 14k gold or sterling silver more durable for an everyday necklace?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 300,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "live-agent-request",
+        "elapsed_ms": 1093.04,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Please connect me to a human agent."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "LIVE_AGENT",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-topic-ambiguous",
+        "elapsed_ms": 888.94,
+        "passed": false,
+        "mismatches": {
+          "product_intent": {
+            "expected": "NONE",
+            "actual": "RECOMMEND"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Is the Cursive Name Necklace available in gold?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "RECOMMEND",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "multi-fact-custom",
+        "elapsed_ms": 1086.64,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Can you make a custom ring with an outside engraving?",
+            "What is the turnaround time for custom rings with engravings?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "simple-order-change",
+        "elapsed_ms": 1108.37,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the engraving on an order?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_CHANGE",
+          "order_id": "E101-30291"
+        }
+      }
+    ],
+    "gemini-2.5-flash-lite": [
+      {
+        "id": "policy-return-basic",
+        "elapsed_ms": 867.63,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return policy?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-engraved-return",
+        "elapsed_ms": 938.93,
+        "passed": false,
+        "mismatches": {
+          "flow_intent": {
+            "expected": "NONE",
+            "actual": "START_RETURN"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I return an engraved ring 20 days after delivery?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-warranty-resize",
+        "elapsed_ms": 743.42,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "My ring was resized by another jeweler and a stone is now loose. Is that covered by warranty?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-material-and-engraving",
+        "elapsed_ms": 882.97,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "What colors are available for platinum wedding bands?",
+            "What is the cost of outside engraving on wedding bands?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-diamond-ethics",
+        "elapsed_ms": 873.64,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Are Eternate natural diamonds ethically sourced?",
+            "How do natural diamonds differ from lab-grown diamonds?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-return-and-shipping",
+        "elapsed_ms": 924.78,
+        "passed": false,
+        "mismatches": {
+          "query_type": {
+            "expected": "MULTI_FACT",
+            "actual": "SINGLE"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return window, and who pays the return shipping cost?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-ring-size",
+        "elapsed_ms": 842.74,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How do I find my ring size?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "policy-cleaning",
+        "elapsed_ms": 679.58,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How should I clean my gold necklace?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "order-track",
+        "elapsed_ms": 789.06,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Please track order E101-10482 for me."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-10482"
+        }
+      },
+      {
+        "id": "order-status",
+        "elapsed_ms": 795.54,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is the status of order E101-8821?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-8821"
+        }
+      },
+      {
+        "id": "order-cancel",
+        "elapsed_ms": 814.09,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I need to cancel order E101-99101 before it ships."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "CANCEL_ORDER",
+          "order_id": "E101-99101"
+        }
+      },
+      {
+        "id": "order-address-change",
+        "elapsed_ms": 817.84,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the shipping address for order E101-55520?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ADDRESS_CHANGE",
+          "order_id": "E101-55520"
+        }
+      },
+      {
+        "id": "order-damaged",
+        "elapsed_ms": 826.97,
+        "passed": false,
+        "mismatches": {
+          "flow_intent": {
+            "expected": "NONE",
+            "actual": "ORDER_STATUS_ENQUIRY"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "My order arrived damaged and I need help."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_STATUS_ENQUIRY",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "order-return-start",
+        "elapsed_ms": 821.76,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I want to start a return for order E101-7402."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": "E101-7402"
+        }
+      },
+      {
+        "id": "order-exchange-start",
+        "elapsed_ms": 784.31,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I received the wrong size and want an exchange for order E101-66301."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_EXCHANGE",
+          "order_id": "E101-66301"
+        }
+      },
+      {
+        "id": "order-payment-dispute",
+        "elapsed_ms": 864.57,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "I was charged twice for order E101-3477 and will dispute this charge."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "PAYMENT_DISPUTE",
+          "order_id": "E101-3477"
+        }
+      },
+      {
+        "id": "sales-wholesale",
+        "elapsed_ms": 847.39,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Do you offer wholesale pricing for jewelry shops?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "WHOLESALE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-recommend-budget",
+        "elapsed_ms": 818.97,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "gift necklace for wife under $250"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 250,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-recommend-material",
+        "elapsed_ms": 905.95,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can you recommend a sterling silver bracelet under $150?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "sterling silver bracelet",
+          "budget_max": 150,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-product-weight",
+        "elapsed_ms": 860.87,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How much does the Cursive Name Necklace weigh?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "WEIGHT",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-compare",
+        "elapsed_ms": 814.57,
+        "passed": false,
+        "mismatches": {
+          "query_type": {
+            "expected": "SINGLE",
+            "actual": "MULTI_FACT"
+          }
+        },
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "What are the pros and cons of 14k gold for everyday wear?",
+            "What are the pros and cons of sterling silver for everyday wear?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "sales-gift-no-term",
+        "elapsed_ms": 888.6,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "birthday gift under $500"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "gift",
+          "budget_max": 500,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-rose-gold",
+        "elapsed_ms": 1019.67,
+        "passed": false,
+        "mismatches": {
+          "depends_on_history": {
+            "expected": true,
+            "actual": false
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What colors are available for rose gold wedding bands?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-engraved-return",
+        "elapsed_ms": 741.1,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can engraved items be returned within the 30-day return window?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-comparison",
+        "elapsed_ms": 1011.18,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Which is better for an engagement ring, a lab-grown diamond or a natural diamond?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-product-weight",
+        "elapsed_ms": 809.54,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How much does the Cursive Name Necklace weigh?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "WEIGHT",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-order-tracking",
+        "elapsed_ms": 841.95,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can you track order E101-45219 now?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "TRACK_ORDER",
+          "order_id": "E101-45219"
+        }
+      },
+      {
+        "id": "followup-address-change",
+        "elapsed_ms": 949.16,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I update the address for order E101-71442?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ADDRESS_CHANGE",
+          "order_id": "E101-71442"
+        }
+      },
+      {
+        "id": "followup-return-start",
+        "elapsed_ms": 1008.56,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How do I send back order E101-11802?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "START_RETURN",
+          "order_id": "E101-11802"
+        }
+      },
+      {
+        "id": "followup-repair",
+        "elapsed_ms": 998.94,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can a gold ring be resized if it is too loose?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "gold ring",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "REPAIR_RESIZE",
+          "order_id": "E101-92014"
+        }
+      },
+      {
+        "id": "topic-shift-return",
+        "elapsed_ms": 1520.27,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What is your return policy?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "topic-shift-shipping",
+        "elapsed_ms": 877.2,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "How long does standard shipping take?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "topic-shift-wholesale",
+        "elapsed_ms": 843.86,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Do you offer wholesale pricing for a retail store?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "WHOLESALE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "complex-order-change",
+        "elapsed_ms": 886.51,
+        "passed": false,
+        "mismatches": {
+          "depends_on_history": {
+            "expected": false,
+            "actual": true
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the ring size and engraving for order E101-60606 before it ships?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_CHANGE",
+          "order_id": "E101-60606"
+        }
+      },
+      {
+        "id": "complex-multi-policy",
+        "elapsed_ms": 941.59,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "Can a ring be resized after purchase?",
+            "Does resizing a ring affect the warranty?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "complex-recommend-and-compare",
+        "elapsed_ms": 941.98,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "What are the durability differences between 14k gold and sterling silver for everyday necklaces?",
+            "What are the pros and cons of 14k gold vs sterling silver for everyday wear?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "necklace",
+          "budget_max": 300,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "live-agent-request",
+        "elapsed_ms": 807.38,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Please connect me to a human agent."
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "LIVE_AGENT",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "followup-topic-ambiguous",
+        "elapsed_ms": 813.94,
+        "passed": false,
+        "mismatches": {
+          "product_intent": {
+            "expected": "NONE",
+            "actual": "RECOMMEND"
+          }
+        },
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "What metals are available for the Cursive Name Necklace?"
+          ],
+          "depends_on_history": true,
+          "product_intent": "RECOMMEND",
+          "product_name": "Cursive Name Necklace",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "multi-fact-custom",
+        "elapsed_ms": 967.89,
+        "passed": false,
+        "mismatches": {
+          "product_intent": {
+            "expected": "NONE",
+            "actual": "RECOMMEND"
+          }
+        },
+        "actual": {
+          "query_type": "MULTI_FACT",
+          "queries": [
+            "What are the options and pricing for custom rings with outside engraving?",
+            "What is the estimated production time for custom rings with outside engraving?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "RECOMMEND",
+          "product_name": "custom ring",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "NONE",
+          "order_id": ""
+        }
+      },
+      {
+        "id": "simple-order-change",
+        "elapsed_ms": 912.36,
+        "passed": true,
+        "mismatches": {},
+        "actual": {
+          "query_type": "SINGLE",
+          "queries": [
+            "Can I change the engraving on order E101-30291?"
+          ],
+          "depends_on_history": false,
+          "product_intent": "NONE",
+          "product_name": "",
+          "budget_max": 0,
+          "budget_min": 0,
+          "flow_intent": "ORDER_CHANGE",
+          "order_id": "E101-30291"
+        }
+      }
+    ]
+  }
+}
